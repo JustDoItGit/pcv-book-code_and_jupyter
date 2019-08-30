@@ -68,14 +68,12 @@ build/
 *.tlb
 *.tli
 *.tlh
-*.tmp
 *.tmp_proj
 *.log
 *.vspscc
 *.vssscc
 .builds
 *.pidb
-*.log
 *.scc
 
 # Visual C++ cache files
@@ -183,24 +181,29 @@ $RECYCLE.BIN/
 .DS_Store
 
 
-#############
-## Python
-#############
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
-*.py[co]
+# C extensions
+*.so
 
-# Packages
-*.egg
-*.egg-info
-dist/
-build/
-eggs/
-parts/
-var/
-sdist/
+# Distribution / packaging
+.Python
+env/
 develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
 .installed.cfg
-
+*.egg
 # Installer logs
 pip-log.txt
 
