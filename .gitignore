@@ -220,3 +220,7 @@ pip-log.txt
 # big data floder
 data/
 PCV-book-data.zip
+
+# JUPYTER
+.ipynb_checkpoints
+/jupyter_code/.ipynb_checkpoints/
