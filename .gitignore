@@ -224,3 +224,4 @@ PCV-book-data.zip
 # JUPYTER
 .ipynb_checkpoints
 /jupyter_code/.ipynb_checkpoints/
+/.idea/
