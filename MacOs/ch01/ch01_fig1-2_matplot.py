@@ -1,7 +1,8 @@
 from PIL import Image
-from pylab import *
+from pylab import imshow, plot, title, show, axis
+import numpy as np
 
-im = array(Image.open('../data/empire.jpg'))
+im = np.array(Image.open('../../data/empire.jpg'))
 
 imshow(im)
 
@@ -11,7 +12,7 @@ plot(x, y, 'r*')
 
 plot(x[:2], y[:2])
 
-#axis('off')
+axis('off')
 
 title('Plotting: "empire.jpg"')
 show()
