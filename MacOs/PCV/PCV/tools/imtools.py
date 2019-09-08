@@ -51,7 +51,7 @@ def histeq(im, nbr_bins=256):
     """    Histogram equalization of a grayscale image. """
 
     # get image histogram
-    imhist, bins = histogram(im.flatten(), nbr_bins, normed=True)
+    imhist, bins = histogram(im.flatten(), nbr_bins, density=True)
     cdf = imhist.cumsum()  # cumulative distribution function
     cdf = 255 * cdf / cdf[-1]  # normalize
 
