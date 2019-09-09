@@ -8,12 +8,13 @@ from pylab import *
 
 # 添加中文字体支持
 from matplotlib.font_manager import FontProperties
-font = FontProperties(fname=r"c:\windows\fonts\SimSun.ttc", size=14)
+
+font = FontProperties(fname='../../fonts/SimHei.ttf', size=14)
 
 # load image and threshold to make sure it is binary
 figure()
 gray()
-im = array(Image.open('../data/houses.png').convert('L'))
+im = array(Image.open('../../data/houses.png').convert('L'))
 subplot(221)
 imshow(im)
 axis('off')
@@ -21,23 +22,23 @@ title(u'原图', fontproperties=font)
 im = (im < 128)
 
 labels, nbr_objects = measurements.label(im)
-print "Number of objects:", nbr_objects
+print("Number of objects:", nbr_objects)
 subplot(222)
-imshow(labels)
+imshow(~labels)
 axis('off')
 title(u'标记后的图', fontproperties=font)
 
 # morphology - opening to separate objects better
 im_open = morphology.binary_opening(im, ones((9, 5)), iterations=2)
 subplot(223)
-imshow(im_open)
+imshow(~im_open)
 axis('off')
 title(u'开运算后的图像', fontproperties=font)
 
 labels_open, nbr_objects_open = measurements.label(im_open)
-print "Number of objects:", nbr_objects_open
+print("Number of objects:", nbr_objects_open)
 subplot(224)
-imshow(labels_open)
+imshow(~labels_open)
 axis('off')
 title(u'开运算后进行标记后的图像', fontproperties=font)
 
