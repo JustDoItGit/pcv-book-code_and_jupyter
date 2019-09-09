@@ -1,10 +1,11 @@
 from PIL import Image
 from pylab import *
 from scipy.ndimage import filters
-#from SciPy import misc
 
-im = array(Image.open('../data/empire.jpg').convert('L'))
-#im = misc.lena()
+# from SciPy import misc
+
+im = array(Image.open('../../data/empire.jpg').convert('L'))
+# im = misc.lena()
 gray()
 
 subplot(1, 2, 1)
