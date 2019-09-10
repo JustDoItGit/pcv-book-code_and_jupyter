@@ -14,7 +14,6 @@ imshow(im)
 
 sigma = 3
 
-imx = zeros(im.shape)
 imx = im + 0.4 * (im - filters.gaussian_filter(im, sigma))
 imx = np.clip(imx, 0, 255)
 
